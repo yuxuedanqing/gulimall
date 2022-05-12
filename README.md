@@ -6,7 +6,7 @@
 
 ## 视频教程
 
-https://www.bilibili.com/video/BV1np4y1C7Y
+https://www.bilibili.com/video/BV1np4y1C7Yf
 
 ## 包名规范
 
