@@ -26,25 +26,30 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.12.0</version>
+				<configuration>
+					<locales>zh_CN</locales>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-maven-plugin</artifactId>
 				<version>4.6.0.0</version>
-				<dependencies>
-					<!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
-					<dependency>
-						<groupId>com.github.spotbugs</groupId>
-						<artifactId>spotbugs</artifactId>
-						<version>4.7.0</version>
-					</dependency>
-				</dependencies>
 				<configuration>
 					<xmlOutput>true</xmlOutput>
 					<!-- spotbugs报告输出目录 -->
 					<xmlOutputDirectory>target/spotbugs</xmlOutputDirectory>
 					<!-- 要包含的过滤配置文件 -->
-					<includeFilterFile>spotbugs-security-include.xml</includeFilterFile>
+					<includeFilterFile>CI/spotbugs/spotbugs-security-include.xml</includeFilterFile>
 					<!-- 要排除的过滤配置文件 -->
-					<excludeFilterFile>spotbugs-security-exclude.xml</excludeFilterFile>
+					<excludeFilterFile>CI/spotbugs/spotbugs-security-exclude.xml</excludeFilterFile>
 					<plugins>
 						<plugin>
 							<groupId>com.h3xstream.findsecbugs</groupId>
@@ -55,6 +60,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+	</reporting>
 
 </project>
