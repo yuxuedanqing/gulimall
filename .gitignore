@@ -18,3 +18,8 @@ gradle-app.setting
 .idea
 .gitee
 **/target/**
+**/mvnw
+**/mvnw.cmd
+**/HELP.md
+**/.mvn
+**/.gitignore
