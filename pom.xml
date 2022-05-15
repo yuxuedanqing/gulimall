@@ -9,6 +9,14 @@
 	<packaging>pom</packaging>
 	<description>聚合服务</description>
 
+	<modules>
+		<module>gulimall-coupon</module>
+		<module>gulimall-member</module>
+		<module>gulimall-order</module>
+		<module>gulimall-product</module>
+		<module>gulimall-ware</module>
+	</modules>
+
 	<repositories>
 		<repository>
 			<id>alimaven</id>
